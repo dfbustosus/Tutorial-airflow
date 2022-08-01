@@ -14,7 +14,7 @@ with DAG(
     description="Este es el primer DAG que creamos",
     start_date=datetime(2022,8,1,2),# esto dice que debemos iniciar el 1-Ago-2022 y a un intervalo diario
     schedule_interval='@daily' ) as dag:
-    task1= BashOperator(task_id='primer_task',
+    task1= BashOperator(task_id='primera_tarea',
     bash_command='echo hola mundo, esta es nuestra primera tarea!'
     )
 
