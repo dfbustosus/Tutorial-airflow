@@ -9,7 +9,7 @@ import json
 from datetime import timedelta
 
 default_args = {
-    'owner': 'airflow',
+    'owner': 'David BU',
     'depends_on_past': False,
     'email_on_failure': False,
     'email_on_retry': False,
@@ -18,7 +18,6 @@ default_args = {
 }
 
 def conexion_api(ti):
-    #return str(datetime.now())
     url =  'https://fakestoreapi.com'
     res = requests.get(f"{url}/products")
     data=json.loads(res.content)
